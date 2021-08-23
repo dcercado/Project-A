@@ -1,0 +1,64 @@
+.btn {
+    padding: 8px 24px;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 20px;
+}
+
+.btn:hover {
+    background-color: white !important;
+    color: #007a4d !important;
+    border: 2px solid #007a4d;
+}
+
+.btn:active,
+.btn:focus {
+    box-shadow: none;
+}
+/* to use when want to make specific to screen size*/
+
+@media (max-width: 768px) {
+    .sub_Nav {
+        display: none;
+    }
+}
+
+.nav-link:hover {
+    background-color: #007a4d !important;
+    color: white !important;
+    border: 2px solid #007a4d;
+}
+
+.nav{
+    text-align: left !important;
+}
+
+.nav-link {
+    color: #007a4d;
+    border: 2px solid transparent;
+    
+}
+
+.countDown {
+    margin: 25px ;
+    max-width: 768px ;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    padding: 1em;
+    background-color: #007A4D;
+
+}
+
+.welcomeMessage{
+    text-align: center;
+    padding: 7%;
+}
+
+.history{
+    text-align: center;
+    padding-left: 7% ;
+    padding-right: 7%;
+    padding-bottom: 7%;
+}
