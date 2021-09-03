@@ -62,3 +62,17 @@
     padding-right: 7%;
     padding-bottom: 7%;
 }
+
+.navbar-toggler,
+.navbar-toggler:active,
+.navbar-toggler:active{
+    border:none;
+    
+}
+
+@media(max-width: 500px){
+#agenda{
+    width: 90% !important;
+}
+
+}
