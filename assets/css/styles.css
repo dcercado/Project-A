@@ -76,3 +76,11 @@
 }
 
 }
+
+.videoModal{
+    margin: 20px;
+}
+.modal-dialog iframe{
+    margin: 0 auto;
+    display: block;
+}
