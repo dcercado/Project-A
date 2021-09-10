@@ -65,8 +65,8 @@
 
 .navbar-toggler,
 .navbar-toggler:active,
-.navbar-toggler:active{
-    border:none;
+.navbar-toggler:focus{
+    border:none !important;
     
 }
 
@@ -83,4 +83,28 @@
 .modal-dialog iframe{
     margin: 0 auto;
     display: block;
+}
+
+
+h1 {
+    font-family: helvetica;
+    font-weight: 900;
+    font-size: 75px;
+    margin-top: -25px;
+}
+
+h2 {
+    font-family: helvetica;
+    font-weight: 900;
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+.half {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    height: 100vh;
 }
