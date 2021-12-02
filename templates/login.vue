@@ -1,0 +1,61 @@
+<template>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+        <!-- JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+        </script>
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <title>Miller's Leadership Login Page</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row" style="height: 100vh;">
+
+
+                <div class="col-md-5" style="margin: auto; align-self: center  ;">
+                    <div class="card shadow">
+
+                        <div class="card-body">
+                            <div class="text-center" style="padding: 3%;">
+                                <img src="assets/img/MillerLogoFromMarketing.png" alt="Miller logo" width="50%">
+
+                            </div>
+                            <form style="padding: 5% ;" action="./landing.html" method="GET">
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp">
+                                    <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                                </div>-->
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                </div>
+                                <!--<div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>-->
+                                <button type="submit" class="btn mt-3"
+                                    style="background-color: #007A4D; color: white; ">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    </html>
+</template>
+

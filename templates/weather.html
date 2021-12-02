@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        h1 {
+            font-family: helvetica;
+            font-weight: 900;
+            font-size: 75px;
+            margin-top: -25px;
+        }
+
+        h2 {
+            font-family: helvetica;
+            font-weight: 900;
+            font-size: 35px;
+            text-transform: uppercase;
+        }
+
+        .half {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            height: 100vh;
+        }
+    </style>
+    <div class="half">
+        <div id="weather"></div>
+    </div>
+    <script>
+
+        const getWeather = async () => {
+            const response = await fetch("https://api.openweathermap.org/data/2.5/weather?q=Jacksonville&appid=10251c72590490dae2266d32478ef93a&units=imperial", { method: 'GET' });
+
+            const data = await response.json();
+
+            return data;
+        }
+
+        getWeather().then(data => {
+            const temp = data.main.temp.toString().slice(0, 2);
+            const type = data.weather[0].main.toString();
+
+            if (type == 'Clear') {
+                document.querySelector(".half").style.background = "url('https://cmsphoto.ww-cdn.com/superstatic/2654713/gal/original/gal-17505992.jpg?v=1612651596') no-repeat center";
+            }
+            else if (type == 'Clouds') {
+                document.querySelector(".half").style.background = "url('https://cmsphoto.ww-cdn.com/superstatic/2654713/gal/original/gal-17505993.jpg?v=1612651597') no-repeat center";
+            }
+            else if (type == 'Drizzle') {
+                document.querySelector(".half").style.background = "url('https://cmsphoto.ww-cdn.com/superstatic/2654713/gal/original/gal-17505994.jpg?v=1612651599') no-repeat center";
+            }
+            else if (type == 'Rain') {
+                document.querySelector(".half").style.background = "url('https://cmsphoto.ww-cdn.com/superstatic/2654713/gal/original/gal-17505994.jpg?v=1612651599') no-repeat center";
+            }
+            else if (type == 'Thunderstorm') {
+                document.querySelector(".half").style.background = "url('https://cmsphoto.ww-cdn.com/superstatic/2654713/gal/original/gal-17505995.jpg?v=1612651601') no-repeat center";
+            }
+            else if (type == 'Snow') {
+                document.querySelector(".half").style.background = "url('https://cmsphoto.ww-cdn.com/superstatic/2654713/gal/original/gal-17505991.jpg?v=1612651594') no-repeat center";
+            }
+            else if (type == 'Mist' || type == 'Fog') {
+                document.querySelector(".half").style.background = "url('https://cmsphoto.ww-cdn.com/superstatic/2654713/gal/original/gal-17505990.jpg?v=1612651592') no-repeat center";
+            }
+
+            document.querySelector('#weather').innerHTML = `<h2>current weather</h2><h1>${temp}<span>&#176;</span></h1>`
+
+        });
+
+    </script>
+</body>
+
+</html>
