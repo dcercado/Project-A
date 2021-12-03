@@ -1,6 +1,6 @@
+<template>
+    
 
-
-    <body>
         <div class="container">
             <div class="row" style="height: 100vh;">
 
@@ -37,8 +37,13 @@
                 </div>
             </div>
         </div>
-    </body>
 
-    </html>
 </template>
 
+<script>
+export default {
+  name: 'loginPage',
+  props: {
+  }
+}
+</script>
